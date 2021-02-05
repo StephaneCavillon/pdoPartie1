@@ -58,6 +58,37 @@
         echo 'erreur de requête : ' . $e->getMessage();
     }
 
+    //exo5
+    try{
+        // selection des clients avec nom commencant par M 
+        $pdo_statement = $pdo->query("SELECT `lastName`, `firstName` FROM `clients` WHERE `lastName` LIKE 'M%' ORDER BY `lastName`");
+
+        $clientsWithM= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
+    } catch(PDOException $e){
+        echo 'erreur de requête : ' . $e->getMessage();
+    }
+
+    //exo6
+    try{
+        // selection des clients avec nom commencant par M 
+        $pdo_statement = $pdo->query('SELECT `title`, `performer`, `date`, `startTime` FROM `shows` ORDER BY `title`');
+
+        $shows= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
+    } catch(PDOException $e){
+        echo 'erreur de requête : ' . $e->getMessage();
+    }
+    
+    //exo7
+    try{
+        // selection des clients avec nom commencant par M 
+        $pdo_statement = $pdo->query('SELECT `lastName`, `firstName`, `birthDate`, `cardNumber` FROM `clients`');
+
+        $clientsCards= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
+    } catch(PDOException $e){
+        echo 'erreur de requête : ' . $e->getMessage();
+    }
+
+
     
     
 
