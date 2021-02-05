@@ -14,7 +14,6 @@
                 <th class="col-2">Date de Naissance</th>
                 <th class="col-2">Carte de fidélité</th>
                 <th class="col-2">Numéro de carte de fidélité</th>
-
             </tr>
         </thead>
         <tbody>

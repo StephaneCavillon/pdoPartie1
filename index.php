@@ -9,11 +9,12 @@
     $user = 'root';
     $password = '';
 
+    // connexion a la base de donnée
+
     try{
         $pdo = new PDO($dsn, $user, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     } catch(PDOException $e){
         echo 'Connexion echouée: ' . $e->getMessage();
     }
@@ -25,7 +26,7 @@
         // echo 'Connexion réussie.';
         $clients = $pdo_statement -> fetchAll(PDO::FETCH_ASSOC); // FETCH_ASSOC permet de renvoyer une tableau associatif on peut sortir des objets avec FETCH_OBJ
     } catch(PDOException $e){
-        echo 'erreur de requête : ' . $e->getMessage();
+        echo 'erreur de requête 1: ' . $e->getMessage();
     }
     
     //exo2
@@ -35,7 +36,7 @@
 
         $showTypes = $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
     } catch(PDOException $e){
-        echo 'erreur de requête : ' . $e->getMessage();
+        echo 'erreur de requête 2: ' . $e->getMessage();
     }
 
     //exo3
@@ -45,7 +46,7 @@
 
         $clients20= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
     } catch(PDOException $e){
-        echo 'erreur de requête : ' . $e->getMessage();
+        echo 'erreur de requête 3: ' . $e->getMessage();
     }
 
     //exo4
@@ -55,7 +56,7 @@
 
         $clientsWithCard= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
     } catch(PDOException $e){
-        echo 'erreur de requête : ' . $e->getMessage();
+        echo 'erreur de requête 4: ' . $e->getMessage();
     }
 
     //exo5
@@ -65,27 +66,27 @@
 
         $clientsWithM= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
     } catch(PDOException $e){
-        echo 'erreur de requête : ' . $e->getMessage();
+        echo 'erreur de requête 5: ' . $e->getMessage();
     }
 
     //exo6
     try{
-        // selection des clients avec nom commencant par M 
+        // selection des titres de spectacles 
         $pdo_statement = $pdo->query('SELECT `title`, `performer`, `date`, `startTime` FROM `shows` ORDER BY `title`');
 
         $shows= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
     } catch(PDOException $e){
-        echo 'erreur de requête : ' . $e->getMessage();
+        echo 'erreur de requête 6: ' . $e->getMessage();
     }
     
     //exo7
     try{
-        // selection des clients avec nom commencant par M 
-        $pdo_statement = $pdo->query('SELECT `lastName`, `firstName`, `birthDate`, `cardNumber` FROM `clients`');
+        // selection des clients avec carte de fidélité ou non  
+        $pdo_statement = $pdo -> query('SELECT `lastName`, `firstName`, `birthDate`, `cardNumber` FROM `clients`');
 
         $clientsCards= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
     } catch(PDOException $e){
-        echo 'erreur de requête : ' . $e->getMessage();
+        echo 'erreur de requête 7: ' . $e->getMessage();
     }
 
 
