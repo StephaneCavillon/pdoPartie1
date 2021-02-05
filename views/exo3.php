@@ -1,4 +1,5 @@
-    <h2 class="text-center my-3">tableau clients</h2>
+
+    <h2 class="text-center my-3">tableau des 20 premiers clients</h2>
 <div class="container">
     <table class="table">
         <thead>
@@ -10,12 +11,12 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($clients as $client): ?>
+            <?php foreach($clients20 as $client): ?>
                 <tr>
-                    <th class="row"><?= $client['id'] ?></th>
-                    <td><?= $client['lastName']?></td>
-                    <td><?= $client['firstName']?></td>
-                    <td><?= $client['cardNumber']?></td>
+                    <th class="row"><?= $client->id ?></th>
+                    <td><?= $client->lastName?></td>
+                    <td><?= $client->firstName?></td>
+                    <td><?= $client->cardNumber?></td>
                 </tr>
             <?php endforeach ?>
         </tbody>
