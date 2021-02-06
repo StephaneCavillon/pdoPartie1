@@ -7,35 +7,35 @@
     }
 
     switch($exo) {
-        case "exo1":
+        case 1:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo1.php');
             break;
         
-        case "exo2":
+        case 2:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo2.php');
             break;
 
-        case "exo3":
+        case 3:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo3.php');
             break;
 
-        case "exo4":
+        case 4:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo4.php');
             break;
 
-        case "exo5":
+        case 5:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo5.php');
             break;
 
-        case "exo6":
+        case 6:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo6.php');
             break;
     
-        case "exo7":
+        case 7:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo7.php');
             break;
 
-        case "exo8":
+        case 8:
             include('C:\xampp\htdocs\projetsWeb\pdoPartie1\views\exo8.php');
             break;
         

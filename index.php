@@ -14,7 +14,6 @@
     try{
         $pdo = new PDO($dsn, $user, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e){
         echo 'Connexion echouée: ' . $e->getMessage();
     }
@@ -99,13 +98,13 @@
 <form action="" method="get">
     <select name="exo" id="exo">
         <option value="">veuillez choisir l'exercice à afficher</option>
-        <option value="exo1">Exercice 1 </option>
-        <option value="exo2">Exercice 2 </option>
-        <option value="exo3">Exercice 3</option>
-        <option value="exo4">Exercice 4</option>
-        <option value="exo5">Exercice 5</option>
-        <option value="exo6">Exercice 6</option>
-        <option value="exo7">Exercice 7</option>
+        <option value="1">Exercice 1 </option>
+        <option value="2">Exercice 2 </option>
+        <option value="3">Exercice 3</option>
+        <option value="4">Exercice 4</option>
+        <option value="5">Exercice 5</option>
+        <option value="6">Exercice 6</option>
+        <option value="7">Exercice 7</option>
     </select>
 
     <button type="submit">Afficher</button>

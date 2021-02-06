@@ -1,4 +1,4 @@
-<h2 class="text-center my-3">tableau des 20 premiers clients</h2>
+<h2 class="text-center my-3">tableau des clients avec une carte de fidélité</h2>
 <div class="container">
     <table class="table">
         <thead>
