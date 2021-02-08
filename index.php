@@ -6,8 +6,8 @@
 
 
     $dsn = 'mysql:dbname=colyseum;host=127.0.0.1;port:3306';
-    $user = 'root';
-    $password = '';
+    $user = 'colyseum';
+    $password = '6cnZ6DEyokttxiYV';
 
     // connexion a la base de donnée
 
