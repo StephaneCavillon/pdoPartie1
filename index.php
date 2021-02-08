@@ -10,10 +10,17 @@
     $password = '6cnZ6DEyokttxiYV';
 
     // connexion a la base de donnée
-
     try{
+        //permet de faire la configuration en même temps que la connexion
+        // $pdo = new PDO($dsn, $user, $password,[
+        //     PDO::ATTR_ERRMODE =>  PDO::ERRMODE_EXCEPTION,
+        //     DPO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
+        // ]);
         $pdo = new PDO($dsn, $user, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // permet de fetch par default en mode objet
+        // $pdo->setAttribute(DPO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ);
+
     } catch(PDOException $e){
         echo 'Connexion echouée: ' . $e->getMessage();
     }
@@ -61,7 +68,7 @@
     //exo5
     try{
         // selection des clients avec nom commencant par M 
-        $pdo_statement = $pdo->query("SELECT `lastName`, `firstName` FROM `clients` WHERE `lastName` LIKE 'M%' ORDER BY `lastName`");
+        $pdo_statement = $pdo->query('SELECT `lastName`, `firstName` FROM `clients` WHERE `lastName` LIKE \'M%\' ORDER BY `lastName`');
 
         $clientsWithM= $pdo_statement -> fetchAll(PDO::FETCH_OBJ);
     } catch(PDOException $e){
@@ -87,10 +94,6 @@
     } catch(PDOException $e){
         echo 'erreur de requête 7: ' . $e->getMessage();
     }
-
-
-    
-    
 
     include('views/template/header.php');
 ?>
